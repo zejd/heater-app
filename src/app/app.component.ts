@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'target-temp';
+  public title = 'Heater App';
+  public minTemperature: number;
+  public maxTemperature: number;
+  public targetTemperature: number;
+
+  constructor() {
+    this.minTemperature = 15;
+    this.maxTemperature = 200;
+    this.targetTemperature = 50;
+  }
+
 }
