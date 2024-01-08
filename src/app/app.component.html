@@ -1,0 +1,16 @@
+<div class="temperature-form">
+  <label for="minTemperature">Minimum Temperature:</label>
+  <input type="number" min="0" id="minTemperature" [(ngModel)]="minTemperature" placeholder="Enter minimum temperature in degrees" />
+
+  <label for="maxTemperature">Maximum Temperature:</label>
+  <input type="number" id="maxTemperature" [(ngModel)]="maxTemperature" placeholder="Enter maximum temperature in degrees" />
+
+  <label for="targetTemperature">Target Temperature:</label>
+  <input type="number" [max]="maxTemperature" [min]="minTemperature" id="targetTemperature" [(ngModel)]="targetTemperature" placeholder="Enter target temperature in degrees" />
+  <app-heater-target-temperature
+    [minTemperature]="minTemperature"
+    [maxTemperature]="maxTemperature"
+    [targetTemperature]="targetTemperature"
+  ></app-heater-target-temperature>
+</div>
+
